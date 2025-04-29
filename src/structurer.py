@@ -1,26 +1,11 @@
-"""
-Structurer module - Orchestrates raw-PDF → LLM prompts → structured JSON.
-
-This module handles the complete pipeline for taking a raw bank statement PDF
-and transforming it into structured, analyzed JSON data:
-1. Parse the PDF to extract raw text and tables
-2. Find and extract transaction tables
-3. Map raw transactions to standardized format
-4. Generate summary statistics and insights
-5. Validate the final output against schema
-
-Exposes one main function `analyze_statement(pdf_path, bank_name)`.
-"""
 import re
 import json
 import time
 from typing import Any, Dict, List, TypedDict
 
 import logging
-# Configure logger
 logger = logging.getLogger(__name__)
 
-# Internal imports
 from src.combined import parse_pdf_combined
 from src.schema_loader import get_columns, get_table_markers, get_schema
 from src.prompts import (
@@ -30,7 +15,6 @@ from src.prompts import (
 )
 from src.llm_client import call_llm
 
-# Type definitions
 class TableDict(TypedDict):
     headers: List[str]
     rows: List[List[str]]
@@ -49,24 +33,10 @@ class SummaryDict(TypedDict):
     potential_loans: List[Dict]
 
 class StructuringError(Exception):
-    """Custom exception for structuring process failures"""
     pass
 
 
 def extract_tables(parsed_doc: dict, bank_name: str) -> List[TableDict]:
-    """
-    Extract transaction tables from parsed PDF document.
-    
-    Args:
-        parsed_doc: Output from PDF parser (pages with text blocks and tables)
-        bank_name: Name of the bank to load appropriate schema
-    
-    Returns:
-        List of tables, each containing headers and rows
-    
-    Raises:
-        StructuringError: If LLM fails to return valid JSON
-    """
     start_time = time.time()
     logger.info(f"Extracting tables for {bank_name} statement...")
     
@@ -116,19 +86,6 @@ def extract_tables(parsed_doc: dict, bank_name: str) -> List[TableDict]:
 
 
 def map_transactions(table: TableDict, bank_name: str, parsed_doc: dict = None) -> List[MappedTxn]:
-    """
-    Map raw transaction table rows to standardized transaction format.
-    
-    Args:
-        table: Transaction table with headers and rows
-        bank_name: Name of the bank to load appropriate schema
-    
-    Returns:
-        List of mapped transactions with standardized fields
-    
-    Raises:
-        StructuringError: If LLM fails to return valid JSON
-    """
     start_time = time.time()
     logger.info(f"Mapping transactions for {bank_name}...")
     
@@ -174,18 +131,6 @@ def map_transactions(table: TableDict, bank_name: str, parsed_doc: dict = None) 
 
 
 def summarize_transactions(mapped: List[MappedTxn]) -> SummaryDict:
-    """
-    Generate summary statistics and insights from mapped transactions.
-    
-    Args:
-        mapped: List of mapped transactions
-    
-    Returns:
-        Dictionary with monthly summaries, overall summary, recurring payments, and potential loans
-    
-    Raises:
-        StructuringError: If LLM fails to return valid JSON
-    """
     start_time = time.time()
     logger.info("Generating transaction summary...")
     
@@ -274,16 +219,6 @@ def summarize_transactions(mapped: List[MappedTxn]) -> SummaryDict:
 
 
 def validate_output(structured: Any, bank_name: str) -> Dict[str, Any]:
-    """
-    Validate and clean structured output against schema using our Python validator.
-    
-    Args:
-        structured: Combined transactions and summary data
-        bank_name: Name of the bank to load appropriate schema
-    
-    Returns:
-        Cleaned, schema-conformant version of the structured data
-    """
     start_time = time.time()
     logger.info("Validating structured output (python)…")
     try:
@@ -305,19 +240,6 @@ def validate_output(structured: Any, bank_name: str) -> Dict[str, Any]:
 
 
 def analyze_statement(pdf_path: str, bank_name: str) -> Dict:
-    """
-    Main orchestration function to analyze a bank statement PDF.
-    
-    Args:
-        pdf_path: Path to the PDF file
-        bank_name: Name of the bank (used to load the appropriate schema)
-    
-    Returns:
-        Structured and validated data with transactions and summary
-    
-    Raises:
-        StructuringError: If any step in the process fails
-    """
     start_time = time.time()
     logger.info(f"Starting analysis of {pdf_path} for bank: {bank_name}")
     
@@ -366,7 +288,6 @@ def analyze_statement(pdf_path: str, bank_name: str) -> Dict:
 
 
 if __name__ == "__main__":
-    """Test the structurer with a sample PDF"""
     import sys
     import os
     

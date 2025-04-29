@@ -4,34 +4,17 @@ from typing import Dict, List, Any
 
 
 class SchemaLoadError(Exception):
-    """Custom exception for schema loading errors."""
     pass
 
-
 class SchemaLoader:
-    """
-    Utility class to load and manage bank statement schemas from JSON files.
-    """
     
     def __init__(self, schema_dir: str = "data/schemas"):
-        """
-        Initialize the schema loader.
-        
-        Args:
-            schema_dir: Directory path where schema files are located
-        """
         self.schema_dir = Path(schema_dir)
         self.schemas: Dict[str, Any] = {}
         self._available_schemas = None
     
     @property
     def available_schemas(self) -> List[str]:
-        """
-        List all available schema names (without file extensions).
-        
-        Returns:
-            List of schema names
-        """
         if self._available_schemas is None:
             # Find all .json files in the schema directory and extract their names
             if not self.schema_dir.exists():
@@ -44,18 +27,6 @@ class SchemaLoader:
         return self._available_schemas
     
     def get_schema(self, bank_name: str) -> Dict[str, Any]:
-        """
-        Get the full schema for a specific bank.
-        
-        Args:
-            bank_name: Name of the bank schema to load
-            
-        Returns:
-            Complete schema as a dictionary
-            
-        Raises:
-            SchemaLoadError: If schema file doesn't exist or has invalid format
-        """
         # Return cached schema if available
         if bank_name in self.schemas:
             return self.schemas[bank_name]
@@ -91,16 +62,6 @@ class SchemaLoader:
             raise SchemaLoadError(f"Error loading schema for '{bank_name}': {str(e)}")
     
     def _validate_columns(self, schema: Dict[str, Any], bank_name: str) -> None:
-        """
-        Validate that columns have required fields.
-        
-        Args:
-            schema: The schema to validate
-            bank_name: Name of the bank schema (for error messages)
-        
-        Raises:
-            SchemaLoadError: If column definitions are invalid
-        """
         if "columns" in schema:
             self._check_column_fields(schema["columns"], bank_name)
         
@@ -110,16 +71,6 @@ class SchemaLoader:
                     self._check_column_fields(section["columns"], f"{bank_name} section {i}")
     
     def _check_column_fields(self, columns: List[Dict[str, Any]], context: str) -> None:
-        """
-        Check that each column has required 'key' and 'name' fields.
-        
-        Args:
-            columns: List of column definitions to check
-            context: Context for error messages
-        
-        Raises:
-            SchemaLoadError: If column definitions are missing required fields
-        """
         for i, col in enumerate(columns):
             if not isinstance(col, dict):
                 raise SchemaLoadError(f"Column {i} in {context} is not a dictionary")
@@ -131,18 +82,6 @@ class SchemaLoader:
                 raise SchemaLoadError(f"Column {i} in {context} is missing 'name' field")
     
     def get_columns(self, bank_name: str) -> List[Dict[str, Any]]:
-        """
-        Get the column definitions for a specific bank schema.
-        
-        Args:
-            bank_name: Name of the bank schema to load
-            
-        Returns:
-            List of column definitions
-            
-        Raises:
-            SchemaLoadError: If schema doesn't contain column definitions
-        """
         schema = self.get_schema(bank_name)
         
         # Case 1: Direct columns at the top level
@@ -168,28 +107,10 @@ class SchemaLoader:
         raise SchemaLoadError(f"No column definitions found for '{bank_name}'")
     
     def get_sections(self, bank_name: str) -> List[Dict[str, Any]]:
-        """
-        Get the section definitions for a multi-section bank schema.
-        
-        Args:
-            bank_name: Name of the bank schema to load
-            
-        Returns:
-            List of section definitions (empty list if schema doesn't use sections)
-        """
         schema = self.get_schema(bank_name)
         return schema.get("sections", [])
     
     def get_table_markers(self, bank_name: str) -> Dict[str, str]:
-        """
-        Get transaction table markers for locating tables in documents.
-        
-        Args:
-            bank_name: Name of the bank schema to load
-            
-        Returns:
-            Dictionary of marker definitions (empty dict if schema doesn't define markers)
-        """
         schema = self.get_schema(bank_name)
         return schema.get("transaction_table_markers", {})
 
@@ -223,15 +144,10 @@ if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(message)s")
     from pathlib import Path
     
-    # Fix the path to look for schemas in the proper location
-    # Get the script location
     script_path = Path(__file__).resolve()
     
-    # Now go up multiple levels to reach the Casca Coding Challenge root
-    # The script is in 'src/structuring/', so we need to go up two levels from src
-    root_dir = script_path.parent.parent  # src -> Casca Coding Challenge
+    root_dir = script_path.parent.parent
     
-    # Use the root_dir to find the data/schemas directory
     schema_dir = root_dir / "data" / "schemas"
     print(f"Looking for schemas in: {schema_dir}")
     
@@ -252,4 +168,4 @@ if __name__ == "__main__":
             print(f"\n→ {name}: ❌ {e}")
             exit(1)
 
-    print("\n✅ All schemas loaded and column-definitions validated.")
+    print("\nAll schemas loaded and column-definitions validated.")

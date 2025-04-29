@@ -1,8 +1,7 @@
-# api/main.py
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.routers.analysis import router as analysis_router
-from fastapi.staticfiles import StaticFiles  # Add this import
+from fastapi.staticfiles import StaticFiles
 import os
 
 app = FastAPI(
@@ -24,10 +23,10 @@ app.add_middleware(
 async def health():
     return {"status": "ok"}
 
-# mount your analysis router at /api/analyze
+# Mount router
 app.include_router(analysis_router, prefix="/api", tags=["analysis"])
 
-# Mount static files - uncomment this when you're ready to serve the React build
+# Mount static files
 HERE = os.path.dirname(__file__)
 build_dir = os.path.abspath(os.path.join(HERE, "../frontend/build"))
 

@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-"""
-Feature Builder for Financial Statement Analysis
-
-This script discovers JSON financial statements, extracts relevant features,
-and prepares a dataset for machine learning.
-"""
-
 import os
 import json
 import glob
@@ -21,7 +13,6 @@ logger = logging.getLogger(__name__)
 
 
 def parse_arguments():
-    """Parse command line arguments."""
     parser = argparse.ArgumentParser(description="Build features from financial statements")
     parser.add_argument("--data-dir", default="data/structured", 
                         help="Directory containing structured JSON statements")
@@ -36,15 +27,6 @@ def parse_arguments():
 
 
 def normalize_filename(filename: str) -> str:
-    """
-    Normalize a filename for consistent matching.
-    
-    Args:
-        filename: Filename to normalize
-        
-    Returns:
-        Normalized filename
-    """
     # Extract basename, remove extension, lowercase
     base = os.path.basename(filename)
     base = os.path.splitext(base)[0].lower()
@@ -52,18 +34,6 @@ def normalize_filename(filename: str) -> str:
 
 
 def discover_files(data_dir: str, labels_file: str) -> Tuple[List[str], Dict[str, int]]:
-    """
-    Discover all JSON statement files and load their corresponding labels.
-    
-    Args:
-        data_dir: Directory containing JSON statement files
-        labels_file: Path to CSV file with labels
-        
-    Returns:
-        Tuple containing:
-            - List of JSON file paths
-            - Dictionary mapping normalized filenames to labels (1=approve, 0=deny)
-    """
     # Find all statement files
     json_pattern = os.path.join(data_dir, "*.json")
     json_files = glob.glob(json_pattern)
@@ -88,15 +58,6 @@ def discover_files(data_dir: str, labels_file: str) -> Tuple[List[str], Dict[str
 
 
 def load_statement(file_path: str) -> Dict[str, Any]:
-    """
-    Load a JSON statement file.
-    
-    Args:
-        file_path: Path to the JSON file
-        
-    Returns:
-        Dictionary containing the parsed JSON data
-    """
     try:
         with open(file_path, 'r') as f:
             return json.load(f)
@@ -106,16 +67,6 @@ def load_statement(file_path: str) -> Dict[str, Any]:
 
 
 def calculate_category_averages(transactions_df: pd.DataFrame, num_months: int) -> Dict[str, float]:
-    """
-    Calculate average monthly transactions by category.
-    
-    Args:
-        transactions_df: DataFrame of transactions
-        num_months: Number of months in the dataset
-        
-    Returns:
-        Dictionary with category monthly averages
-    """
     categories = {
         'deposit': 0.0,
         'withdrawal': 0.0,
@@ -148,15 +99,6 @@ def calculate_category_averages(transactions_df: pd.DataFrame, num_months: int) 
 
 
 def calculate_monthly_flow_metrics(transactions_df: pd.DataFrame) -> Dict[str, float]:
-    """
-    Calculate basic monthly flow metrics from transactions.
-    
-    Args:
-        transactions_df: DataFrame of transactions
-        
-    Returns:
-        Dictionary with monthly flow metrics
-    """
     metrics = {
         'num_months': 1,  # Default to 1 to avoid division by zero
     }
@@ -185,15 +127,6 @@ def calculate_monthly_flow_metrics(transactions_df: pd.DataFrame) -> Dict[str, f
 
 
 def calculate_potential_loans(statement: Dict[str, Any]) -> Dict[str, float]:
-    """
-    Calculate metrics related to potential loans.
-    
-    Args:
-        statement: Dictionary containing statement data
-        
-    Returns:
-        Dictionary with loan-related metrics
-    """
     potential_loans = statement.get('summary', {}).get('potential_loans', [])
     
     return {
@@ -203,15 +136,6 @@ def calculate_potential_loans(statement: Dict[str, Any]) -> Dict[str, float]:
 
 
 def extract_features(statement: Dict[str, Any]) -> Dict[str, float]:
-    """
-    Extract all features from a statement.
-    
-    Args:
-        statement: Dictionary containing statement data
-        
-    Returns:
-        Dictionary of extracted features
-    """
     features = {}
     
     # Get transactions and summary
@@ -267,16 +191,6 @@ def extract_features(statement: Dict[str, Any]) -> Dict[str, float]:
 
 
 def build_features(data_dir: str, labels_file: str) -> pd.DataFrame:
-    """
-    Build a feature dataset from all available statements.
-    
-    Args:
-        data_dir: Directory containing JSON statement files
-        labels_file: Path to CSV file with labels
-        
-    Returns:
-        DataFrame containing features and labels
-    """
     # Discover files and load labels
     json_files, filename_to_label = discover_files(data_dir, labels_file)
     
@@ -327,14 +241,6 @@ def build_features(data_dir: str, labels_file: str) -> pd.DataFrame:
 
 
 def save_features(df: pd.DataFrame, output_dir: str, output_format: str = 'both') -> None:
-    """
-    Save features to disk in the specified format.
-    
-    Args:
-        df: DataFrame containing features and label
-        output_dir: Directory to save features
-        output_format: Format to save ('csv', 'numpy', or 'both')
-    """
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
     
@@ -363,9 +269,6 @@ def save_features(df: pd.DataFrame, output_dir: str, output_format: str = 'both'
 
 
 def main():
-    """
-    Main function to execute the feature building pipeline.
-    """
     # Parse command line arguments
     args = parse_arguments()
     

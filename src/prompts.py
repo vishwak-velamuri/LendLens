@@ -18,19 +18,6 @@ def create_table_finder_prompt(
     max_content_length: int = sys.maxsize,
     column_definitions: List[Dict[str, Any]] = None
 ) -> str:
-    """
-    Create a prompt for finding transaction tables in a raw document.
-    
-    Args:
-        raw_document: Raw text and table data extracted from the document
-        bank_name: Name of the bank for context
-        table_markers: Optional markers to help identify transaction tables
-        max_content_length: Maximum length of raw document to include in prompt
-        column_definitions: List of expected column definitions
-        
-    Returns:
-        Formatted prompt string with instruction to return JSON only
-    """
     # Safeguard against huge inputs
     if len(raw_document) > max_content_length:
         truncated_document = raw_document[:max_content_length] + "\n...(content truncated for length)"
@@ -103,18 +90,6 @@ def create_column_mapper_prompt(
     statement_period: str = None,
     max_transactions: int = sys.maxsize
 ) -> str:
-    """
-    Create a prompt for mapping table columns to standardized fields and categorizing transactions.
-    
-    Args:
-        table: Extracted table with headers and rows
-        bank_name: Name of the bank for context
-        column_definitions: Schema column definitions
-        max_transactions: Maximum number of transactions to include in prompt
-        
-    Returns:
-        Formatted prompt string with instruction to return JSON only
-    """
     # Safeguard against huge inputs
     if len(table.get("rows", [])) > max_transactions:
         # Keep first 80% and last 20% of transactions to preserve most important data
@@ -322,16 +297,6 @@ def create_summary_prompt(
     mapped_transactions: List[Dict[str, Any]], 
     max_transactions: int = 300
 ) -> str:
-    """
-    Create a prompt for computing summary statistics from transaction data.
-    
-    Args:
-        mapped_transactions: List of mapped and categorized transactions
-        max_transactions: Maximum number of transactions to include in prompt
-        
-    Returns:
-        Formatted prompt string with instruction to return JSON only
-    """
     # Safeguard against huge inputs
     if len(mapped_transactions) > max_transactions:
         # Keep first 70% and last 30% of transactions to preserve most important data
@@ -434,16 +399,6 @@ Do not include any explanation or preamble - respond with pure JSON only. Import
 
 
 def create_validation_prompt(output_json: str, schema: Dict[str, Any]) -> str:
-    """
-    Create a prompt for validating JSON output against a schema.
-    
-    Args:
-        output_json: The JSON output to validate
-        schema: Bank-specific schema definition
-        
-    Returns:
-        Formatted prompt string with instruction to return JSON only
-    """
     return f"""
 # Validate JSON Output
 

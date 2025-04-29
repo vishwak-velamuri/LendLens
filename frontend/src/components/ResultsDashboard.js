@@ -1,7 +1,7 @@
 import React from 'react';
 
 function ResultsDashboard({ data, onReset }) {
-  // Defensive check - if data is null or undefined, show error
+  // Defensive check
   if (!data) {
     return (
       <div className="error-container">
@@ -23,7 +23,7 @@ function ResultsDashboard({ data, onReset }) {
   const decision = data.decision || 'UNKNOWN';
   const confidence = data.confidence !== undefined ? data.confidence : 0;
   
-  // Extract metrics data - handle nested structures
+  // Extract metrics data
   const metrics = data.metrics || {};
   const monthlyTotals = metrics.monthly_totals || {};
   const categoryTotals = metrics.category_totals || {

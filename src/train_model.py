@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-"""
-XGBoost Model Training Script
-
-This script loads the preprocessed features, trains an XGBoost classifier using 
-cross-validation, and saves the final model along with performance metrics.
-"""
-
 import os
 import sys
 import json
@@ -22,7 +14,6 @@ from sklearn.model_selection import cross_val_score, KFold, LeaveOneOut
 from sklearn.metrics import roc_auc_score, accuracy_score
 import xgboost as xgb
 
-# Configure logging
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -54,16 +45,6 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_data(input_dir: str, input_format: str = "auto") -> Tuple[np.ndarray, np.ndarray]:
-    """
-    Load features and labels from processed data.
-    
-    Args:
-        input_dir: Directory containing processed data
-        input_format: Format of input data ("auto", "numpy", or "csv")
-        
-    Returns:
-        Tuple of (X, y) as numpy arrays
-    """
     # Try numpy format first if auto or numpy is specified
     if input_format in ["auto", "numpy"]:
         try:
@@ -117,15 +98,6 @@ def load_data(input_dir: str, input_format: str = "auto") -> Tuple[np.ndarray, n
 
 
 def load_hyperparameters(config_path: str) -> Dict[str, Any]:
-    """
-    Load XGBoost hyperparameters from YAML file.
-    
-    Args:
-        config_path: Path to YAML configuration file
-        
-    Returns:
-        Dictionary of hyperparameters
-    """
     try:
         with open(config_path, 'r') as f:
             params = yaml.safe_load(f)
@@ -153,17 +125,6 @@ def load_hyperparameters(config_path: str) -> Dict[str, Any]:
 
 
 def setup_cross_validation(n_samples: int, n_folds: Optional[int], random_seed: int) -> Any:
-    """
-    Set up cross-validation strategy based on dataset size.
-    
-    Args:
-        n_samples: Number of samples in the dataset
-        n_folds: Number of CV folds (or None for auto)
-        random_seed: Random seed for reproducibility
-        
-    Returns:
-        Cross-validation iterator
-    """
     if n_folds is None:
         # Auto-select CV strategy based on dataset size
         if n_samples < 10:
@@ -191,20 +152,6 @@ def run_cross_validation(
     metric: str, 
     random_seed: int
 ) -> Dict[str, float]:
-    """
-    Run cross-validation and return performance metrics.
-    
-    Args:
-        X: Feature matrix
-        y: Target vector
-        params: XGBoost hyperparameters
-        cv: Cross-validation iterator
-        metric: Evaluation metric ('auc' or 'accuracy')
-        random_seed: Random seed for reproducibility
-        
-    Returns:
-        Dictionary with CV performance metrics
-    """
     # Clone params to avoid modifying the original
     model_params = params.copy()
     
@@ -254,18 +201,6 @@ def train_final_model(
     params: Dict[str, Any], 
     random_seed: int
 ) -> xgb.XGBClassifier:
-    """
-    Train the final model on the full dataset.
-    
-    Args:
-        X: Feature matrix
-        y: Target vector
-        params: XGBoost hyperparameters
-        random_seed: Random seed for reproducibility
-        
-    Returns:
-        Trained XGBoost classifier
-    """
     # Clone params to avoid modifying the original
     model_params = params.copy()
     
@@ -296,17 +231,6 @@ def save_model_and_metadata(
     X: np.ndarray,
     random_seed: int
 ) -> None:
-    """
-    Save the trained model and metadata.
-    
-    Args:
-        model: Trained XGBoost classifier
-        params: Hyperparameters used for training
-        cv_results: Cross-validation results
-        output_dir: Directory to save model and metadata
-        X: Feature matrix (for extracting feature importance)
-        random_seed: Random seed used for training
-    """
     os.makedirs(output_dir, exist_ok=True)
     
     # Save the model
@@ -350,7 +274,6 @@ def save_model_and_metadata(
 
 
 def main():
-    """Main function to run the model training pipeline."""
     # Parse command line arguments
     args = parse_args()
     

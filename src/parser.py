@@ -57,7 +57,6 @@ def safe_rmtree(path, *, ignore_errors=False, onexc=None):
 shutil.rmtree = safe_rmtree
 
 def extract_text_blocks(pdf_path: str, page_num: int) -> List[str]:
-    """Extract text blocks from a specific page of a PDF file using PDFMiner."""
     text_blocks = []
     
     try:
@@ -81,7 +80,6 @@ def extract_text_blocks(pdf_path: str, page_num: int) -> List[str]:
 
 
 def extract_tables(pdf_path: str, page_num: int) -> List[List[List[str]]]:
-    """Extract tables from a specific page of a PDF file using Camelot."""
     tables_data = []
     
     try:
@@ -115,28 +113,6 @@ def extract_tables(pdf_path: str, page_num: int) -> List[List[List[str]]]:
 
 
 def parse_pdf(pdf_path: str) -> Dict[str, Any]:
-    """
-    Parse a PDF file and extract text blocks and tables.
-    
-    Args:
-        pdf_path: Path to the PDF file
-        
-    Returns:
-        A dictionary with the following structure:
-        {
-            "pages": [
-                {
-                    "page_num": 1,
-                    "text_blocks": ["First line of text", "Next paragraph…", …],
-                    "tables": [
-                        [["Header1","Header2",…], ["row1col1","row1col2",…], …],
-                        …  # one entry per table found on this page
-                    ]
-                },
-                ...
-            ]
-        }
-    """
     if not os.path.exists(pdf_path):
         raise FileNotFoundError(f"PDF file not found: {pdf_path}")
     
@@ -161,7 +137,6 @@ def parse_pdf(pdf_path: str) -> Dict[str, Any]:
 
 
 def save_parsed_pdf(pdf_path: str, output_path: str) -> None:
-    """Parse a PDF and save the result to a JSON file."""
     parsed_data = parse_pdf(pdf_path)
     
     with open(output_path, 'w', encoding='utf-8') as file:

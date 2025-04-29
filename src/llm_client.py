@@ -1,19 +1,10 @@
-"""
-LLM Client module for interacting with OpenAI's API.
-Provides a clean interface for sending prompts and receiving responses.
-"""
-
 import os
 import time
 import logging
-from typing import Optional
 
 from openai import OpenAI
-from openai.types.chat import ChatCompletion
-# Import relevant error types
 from openai import APIError, RateLimitError, APIConnectionError
 
-# Configure logger
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
@@ -37,20 +28,6 @@ client = OpenAI(api_key=api_key)
 def call_llm(
     prompt: str, *, model: str = MODEL_NAME, temperature: float = TEMPERATURE
 ) -> str:
-    """
-    Call the OpenAI API with the given prompt.
-    
-    Args:
-        prompt: The text prompt to send to the model
-        model: The model name (default: "gpt-3.5-turbo")
-        temperature: Controls randomness (0.0 to 1.0, default: 0.0)
-    
-    Returns:
-        The model's response text
-    
-    Raises:
-        Exception: If the API call fails after retries
-    """
     messages = [
         {"role":"system","content":"You are a JSON‐only response engine.  Always respond with valid JSON only, no markdown, no prose."},
         {"role": "user",   "content": prompt}
@@ -103,7 +80,6 @@ def call_llm(
 
 
 if __name__ == "__main__":
-    """Simple test for the LLM client"""
     logging.basicConfig(level=logging.INFO)
     
     test_prompt = input("Enter a prompt (or press Enter for default): ").strip()

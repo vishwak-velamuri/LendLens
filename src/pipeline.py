@@ -1,5 +1,3 @@
-# src/pipeline.py
-
 import os
 import traceback
 import logging
@@ -22,12 +20,6 @@ def run_pipeline(
     interest_rate: float,
     term_months: int,
 ) -> AnalysisResponse:
-    """
-    1) Turn PDF → structured dict via structurer.analyze_statement
-    2) Compute feature vector via compute_features
-    3) Run predict_decision to get decision + confidence + raw metrics
-    4) Map into the AnalysisResponse Pydantic model formatted for the frontend
-    """
     try:
         logger.info(f"Starting pipeline with pdf: {pdf_path}")
         logger.info(f"Loan parameters: amount={loan_amount}, down={down_payment}, rate={interest_rate}, term={term_months}")

@@ -251,7 +251,6 @@ tr:hover {
   border-left: 8px solid #ea4335;
 }
 
-/* Additional Modern Elements */
 .card {
   background: #fff;
   border-radius: 12px;
@@ -340,7 +339,6 @@ tr:hover {
   background-color: #000;
 }
 
-/* Additional CSS classes for ResultsDashboard */
 .dashboard-subtitle {
   font-size: 1.25rem;
   margin-top: 1.5rem;
@@ -371,8 +369,6 @@ strong.badge-danger {
   background: none;
   padding: 0;
 }
-
-/* Add these to your existing App.css file */
 
 /* File name styling with wrap support */
 .file-name {

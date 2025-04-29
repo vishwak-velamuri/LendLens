@@ -4,37 +4,12 @@ import logging
 from typing import Dict, Any
 
 import logging
-# Configure logger
 logger = logging.getLogger(__name__)
 
-# Import both parsers
 from src.parser import parse_pdf as parse_pdf_digital
 from src.ocr import parse_pdf_ocr
 
-def parse_pdf_combined(pdf_path: str, ocr_dpi: int = 300) -> Dict[str, Any]:
-    """
-    Parse a PDF file using digital extraction first, falling back to OCR for pages
-    where digital extraction fails to extract content.
-    
-    Args:
-        pdf_path: Path to the PDF file
-        
-    Returns:
-        A dictionary with the structure:
-        {
-            "pages": [
-                {
-                    "page_num": 1,
-                    "text_blocks": ["First line of text", "Next paragraph…", …],
-                    "tables": [
-                        [["Header1","Header2",…], ["row1col1","row1col2",…], …],
-                        …  # one entry per table found on this page
-                    ]
-                },
-                ...
-            ]
-        }
-    """
+def parse_pdf_combined(pdf_path: str, ocr_dpi: int = 300) -> Dict[str, Any]:   
     if not os.path.exists(pdf_path):
         raise FileNotFoundError(f"PDF file not found: {pdf_path}")
     
@@ -79,7 +54,6 @@ def parse_pdf_combined(pdf_path: str, ocr_dpi: int = 300) -> Dict[str, Any]:
 
 
 def save_parsed_pdf_combined(pdf_path: str, output_path: str, ocr_dpi: int = 300) -> None:
-    """Parse a PDF using the combined approach and save the result to a JSON file."""
     parsed_data = parse_pdf_combined(pdf_path, ocr_dpi)
     
     with open(output_path, 'w', encoding='utf-8') as file:

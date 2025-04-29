@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-"""
-XGBoost Model Evaluation Script
-
-This script loads a trained XGBoost model, evaluates its performance on data,
-and reports various metrics including accuracy, ROC AUC, precision, recall, and F1 score.
-"""
-
 import os
 import sys
 import json
@@ -49,16 +41,6 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_data(input_dir: str, input_format: str = "auto") -> Tuple[np.ndarray, np.ndarray]:
-    """
-    Load features and labels from processed data.
-    
-    Args:
-        input_dir: Directory containing processed data
-        input_format: Format of input data ("auto", "numpy", or "csv")
-        
-    Returns:
-        Tuple of (X, y) as numpy arrays
-    """
     # Try numpy format first if auto or numpy is specified
     if input_format in ["auto", "numpy"]:
         try:
@@ -112,15 +94,6 @@ def load_data(input_dir: str, input_format: str = "auto") -> Tuple[np.ndarray, n
 
 
 def load_model(model_path: str) -> Any:
-    """
-    Load the trained model from disk.
-    
-    Args:
-        model_path: Path to the saved model file
-        
-    Returns:
-        Loaded model
-    """
     try:
         logger.info(f"Loading model from {model_path}")
         model = joblib.load(model_path)
@@ -131,17 +104,6 @@ def load_model(model_path: str) -> Any:
 
 
 def evaluate_model(model: Any, X: np.ndarray, y: np.ndarray) -> Dict[str, Any]:
-    """
-    Evaluate the model and return performance metrics.
-    
-    Args:
-        model: Trained model
-        X: Feature matrix
-        y: True labels
-        
-    Returns:
-        Dictionary of evaluation metrics
-    """
     logger.info("Evaluating model performance")
     
     # Get predictions
@@ -184,12 +146,6 @@ def evaluate_model(model: Any, X: np.ndarray, y: np.ndarray) -> Dict[str, Any]:
 
 
 def print_evaluation_results(results: Dict[str, Any]) -> None:
-    """
-    Print formatted evaluation results to console.
-    
-    Args:
-        results: Dictionary of evaluation metrics
-    """
     logger.info("========== MODEL EVALUATION RESULTS ==========")
     
     # Print accuracy and ROC AUC
@@ -239,13 +195,6 @@ def print_evaluation_results(results: Dict[str, Any]) -> None:
 
 
 def save_evaluation_results(results: Dict[str, Any], output_path: str) -> None:
-    """
-    Save evaluation results to a JSON file.
-    
-    Args:
-        results: Dictionary of evaluation metrics
-        output_path: Path to save the results
-    """
     try:
         os.makedirs(os.path.dirname(output_path), exist_ok=True)
         with open(output_path, 'w') as f:
@@ -256,7 +205,6 @@ def save_evaluation_results(results: Dict[str, Any], output_path: str) -> None:
 
 
 def main():
-    """Main function to run the model evaluation pipeline."""
     # Parse command line arguments
     args = parse_args()
     

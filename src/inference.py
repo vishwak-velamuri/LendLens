@@ -14,18 +14,6 @@ _cached_model = None
 
 
 def load_model(model_path: str = "data/processed/model.joblib") -> Any:
-    """
-    Load and return the trained XGBoost model from disk.
-    
-    Args:
-        model_path: Path to the saved model file
-        
-    Returns:
-        The loaded XGBoost model
-        
-    Raises:
-        FileNotFoundError: If the model file doesn't exist
-    """
     global _cached_model
     
     # Return cached model if already loaded
@@ -50,20 +38,6 @@ def predict_decision(
     form: Dict[str, float],
     model: Optional[Any] = None
 ) -> Dict[str, Any]:
-    """
-    Given LLM-structured JSON + loan form inputs, produce:
-    - decision: 0 or 1 (or "DENY"/"APPROVE" as string)
-    - confidence: probability of approval
-    - metrics: key financial metrics for UI display
-    
-    Args:
-        structured: Dictionary containing banking transaction data
-        form: Dictionary containing loan application form fields
-        model: Optional pre-loaded model to use for prediction
-        
-    Returns:
-        Dictionary with decision, confidence, and financial metrics
-    """
     # Validate the structured data has required fields
     summary = structured.get("summary", {})
     if "monthly_summaries" not in summary or "overall_summary" not in summary:
@@ -119,7 +93,7 @@ def predict_decision(
 if __name__ == "__main__":
     import json
 
-    # 1) Load one of your already‐structured sample statements
+    # 1) Load a already‐structured sample statement
     sample = json.load(open("data/structured/IDFC.json", "r"))
 
     # 2) Create a dummy loan form (values don’t change the banking metrics)

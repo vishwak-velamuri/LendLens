@@ -10,7 +10,7 @@ def get_feature_names():
     try:
         return pd.read_csv("data/processed/feature_names.csv", header=None).iloc[:, 0].tolist()
     except FileNotFoundError:
-        # Fallback if file isn't available - exact match to what's in feature_names.csv
+        # Fallback if file isn't available
         return [
             "num_months", "total_deposits", "total_withdrawals", "total_withdrawal_regular_bill",
             "net_cash_flow", "deposit", "withdrawal", "withdrawal_regular_bill",
@@ -19,17 +19,6 @@ def get_feature_names():
 
 
 def compute_features(structured: Dict[str, Any], form: Dict[str, float]) -> np.ndarray:
-    """
-    Transforms structured banking data into feature vector for XGBoost model.
-    
-    Args:
-        structured: Dictionary containing banking transaction data in structured format
-                   with 'monthly_summaries', 'overall_summary', and 'potential_loans' sections
-        form: Dictionary containing loan application form fields (not used in feature vector)
-    
-    Returns:
-        np.ndarray: 1D array of exactly the 10 features in correct order for model prediction
-    """
     # Get cached feature names to ensure correct ordering
     feature_names = get_feature_names()
     
@@ -99,11 +88,11 @@ if __name__ == "__main__":
     import json
     from src.feature_computation import compute_features, get_feature_names
 
-    # 1) Pick one of your structured samples here:
+    # 1) Load a sample structured JSON file
     sample_path = "data/structured/Commonwealth.json"
     structured = json.load(open(sample_path, "r"))
 
-    # 2) Define a dummy form (values don’t affect banking features)
+    # 2) Define a dummy form
     form = {
         "loan_amount": 25000.0,
         "down_payment": 5000.0,

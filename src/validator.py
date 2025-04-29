@@ -1,12 +1,3 @@
-"""
-Validator module for ensuring structured bank statement data
-conforms to the expected schema.
-
-This module validates transaction data and summary information,
-converting types where possible and ensuring all required fields
-are present with valid values.
-"""
-
 import re
 import json
 import logging
@@ -24,24 +15,10 @@ ALLOWED_CATEGORIES = {"deposit", "withdrawal", "withdrawal_regular_bill"}
 
 
 class ValidationError(Exception):
-    """Exception raised for validation errors that cannot be automatically fixed."""
     pass
 
 
 def parse_date(date_str: str, statement_year=None) -> str:
-    """
-    Parse a date string in various formats and return standardized YYYY-MM-DD format.
-    
-    Args:
-        date_str: Date string in various formats
-        statement_year: Optional year to use for dates without years
-        
-    Returns:
-        Date string in YYYY-MM-DD format
-        
-    Raises:
-        ValidationError: If the date cannot be parsed
-    """
     date_str = date_str.strip()
     
     # Common date formats to try
@@ -145,18 +122,6 @@ def parse_date(date_str: str, statement_year=None) -> str:
 
 
 def parse_amount(amount_val: Any) -> float:
-    """
-    Parse an amount value into a standardized float.
-    
-    Args:
-        amount_val: Amount value as string, float, or int
-        
-    Returns:
-        Standardized float value
-        
-    Raises:
-        ValidationError: If the amount cannot be parsed
-    """
     if isinstance(amount_val, (int, float)):
         return float(amount_val)
     
@@ -186,19 +151,6 @@ def parse_amount(amount_val: Any) -> float:
 
 
 def validate_transaction(txn: Dict[str, Any], schema: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Validate and clean a single transaction against the schema.
-    
-    Args:
-        txn: Transaction dictionary
-        schema: Schema definition
-        
-    Returns:
-        Cleaned transaction dictionary
-        
-    Raises:
-        ValidationError: If the transaction cannot be validated
-    """
     # Start with a new dict to ensure only valid fields are included
     validated_txn = {}
     
@@ -253,16 +205,6 @@ def validate_transaction(txn: Dict[str, Any], schema: Dict[str, Any]) -> Dict[st
 
 
 def validate_summary(summary: Dict[str, Any], schema: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Validate and clean the summary section against the schema.
-    
-    Args:
-        summary: Summary dictionary
-        schema: Schema definition
-        
-    Returns:
-        Cleaned summary dictionary
-    """
     # Start with a new dict to ensure only valid fields are included
     validated_summary = {}
     
@@ -454,19 +396,6 @@ def validate_summary(summary: Dict[str, Any], schema: Dict[str, Any]) -> Dict[st
 
 
 def validate_structure(structured_data: Dict[str, Any], schema: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Validate the complete structured data against the schema.
-    
-    Args:
-        structured_data: Complete structured data (transactions and summary)
-        schema: Schema definition
-        
-    Returns:
-        Cleaned and validated structured data
-        
-    Raises:
-        ValidationError: If validation fails
-    """
     if not isinstance(structured_data, dict):
         raise ValidationError(f"Expected dict, got {type(structured_data)}")
     
@@ -524,19 +453,6 @@ def validate_structure(structured_data: Dict[str, Any], schema: Dict[str, Any]) 
 
 
 def validate_output(structured_data: Dict[str, Any], bank_name: str) -> Dict[str, Any]:
-    """
-    Main validation function that loads schema and validates structured data.
-    
-    Args:
-        structured_data: Complete structured data (transactions and summary)
-        bank_name: Name of the bank to load appropriate schema
-        
-    Returns:
-        Cleaned and validated structured data
-        
-    Raises:
-        ValidationError: If validation fails
-    """
     try:
         # Load schema for the bank
         schema = get_schema(bank_name)
@@ -550,7 +466,6 @@ def validate_output(structured_data: Dict[str, Any], bank_name: str) -> Dict[str
 
 
 if __name__ == "__main__":
-    """Test the validator with sample data"""
     import sys
     
     # Configure logging

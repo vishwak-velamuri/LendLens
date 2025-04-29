@@ -10,30 +10,19 @@ from pdf2image.exceptions import PDFInfoNotInstalledError
 import pytesseract
 from PIL import Image
 
-# Get logger for this module
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
 
-# Configure Tesseract command path if needed
+# Configure Tesseract command path
 pytesseract.pytesseract.tesseract_cmd = os.environ.get(
     "TESSERACT_CMD", pytesseract.pytesseract.tesseract_cmd
 )
 
 
 def convert_pdf_to_images(pdf_path: str, dpi: int = 300) -> List[Image.Image]:
-    """
-    Convert PDF pages to images.
-    
-    Args:
-        pdf_path: Path to the PDF file
-        dpi: Resolution for the conversion
-        
-    Returns:
-        List of PIL Image objects, one per page
-    """
     try:
         return convert_from_path(pdf_path, dpi=dpi)
     except PDFInfoNotInstalledError:
@@ -48,15 +37,6 @@ def convert_pdf_to_images(pdf_path: str, dpi: int = 300) -> List[Image.Image]:
 
 
 def extract_text_blocks_ocr(image: Image.Image) -> List[str]:
-    """
-    Extract text blocks from an image using OCR.
-    
-    Args:
-        image: PIL Image object
-        
-    Returns:
-        List of text blocks
-    """
     try:
         # Run OCR to get detailed text data
         ocr_data = pytesseract.image_to_data(image, output_type=pytesseract.Output.DICT)
@@ -85,15 +65,6 @@ def extract_text_blocks_ocr(image: Image.Image) -> List[str]:
 
 
 def extract_tables_ocr(image: Image.Image) -> List[List[List[str]]]:
-    """
-    Extract tables from an image using OpenCV for line detection and OCR for text extraction.
-    
-    Args:
-        image: PIL Image object
-        
-    Returns:
-        List of tables, where each table is a list of rows, and each row is a list of cells
-    """
     try:
         # Convert PIL Image to OpenCV format
         img = np.array(image)
@@ -202,29 +173,6 @@ def extract_tables_ocr(image: Image.Image) -> List[List[List[str]]]:
 
 
 def parse_pdf_ocr(pdf_path: str, dpi: int = 300) -> Dict[str, Any]:
-    """
-    Parse a PDF file using OCR and extract text blocks and tables.
-    
-    Args:
-        pdf_path: Path to the PDF file
-        dpi: Resolution for the PDF to image conversion
-        
-    Returns:
-        A dictionary with the same structure as parse_pdf:
-        {
-            "pages": [
-                {
-                    "page_num": 1,
-                    "text_blocks": ["First line of text", "Next paragraph…", …],
-                    "tables": [
-                        [["Header1","Header2",…], ["row1col1","row1col2",…], …],
-                        …  # one entry per table found on this page
-                    ]
-                },
-                ...
-            ]
-        }
-    """
     if not os.path.exists(pdf_path):
         raise FileNotFoundError(f"PDF file not found: {pdf_path}")
     
@@ -256,7 +204,6 @@ def parse_pdf_ocr(pdf_path: str, dpi: int = 300) -> Dict[str, Any]:
 
 
 def save_parsed_pdf_ocr(pdf_path: str, output_path: str, dpi: int = 300) -> None:
-    """Parse a PDF using OCR and save the result to a JSON file."""
     try:
         parsed_data = parse_pdf_ocr(pdf_path, dpi=dpi)
         
@@ -271,7 +218,7 @@ def save_parsed_pdf_ocr(pdf_path: str, output_path: str, dpi: int = 300) -> None
 if __name__ == "__main__":
     import sys
     
-    # Configure logging only when running as script
+    # Configure logging
     logging.basicConfig(
         level=logging.INFO,
         format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
