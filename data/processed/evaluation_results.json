@@ -1,0 +1,63 @@
+{
+  "accuracy": 1.0,
+  "confusion_matrix": [
+    [
+      2,
+      0
+    ],
+    [
+      0,
+      2
+    ]
+  ],
+  "class_distribution": {
+    "actual": [
+      2,
+      2
+    ],
+    "predicted": [
+      2,
+      2
+    ]
+  },
+  "roc_auc": 1.0,
+  "classification_report": {
+    "0": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "1": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 2.0
+    },
+    "accuracy": 1.0,
+    "macro avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    },
+    "weighted avg": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 4.0
+    }
+  },
+  "feature_importances": {
+    "num_months": 0.13399404287338257,
+    "total_withdrawal_regular_bill": 0.25405535101890564,
+    "total_deposits": 0.3564941883087158,
+    "total_withdrawals": 0.2554563581943512,
+    "net_cash_flow": 0.0,
+    "deposit": 0.0,
+    "withdrawal": 0.0,
+    "withdrawal_regular_bill": 0.0,
+    "potential_loan_count": 0.0,
+    "potential_loan_total_paid": 0.0
+  }
+}

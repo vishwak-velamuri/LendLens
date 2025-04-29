@@ -1,0 +1,5 @@
+num_months,total_withdrawal_regular_bill,total_deposits,total_withdrawals,net_cash_flow,deposit,withdrawal,withdrawal_regular_bill,potential_loan_count,potential_loan_total_paid,filename,approved
+2,586.62,3580.0,-3935.37,-355.37,1790.0,1967.685,293.31,2,2400.0,Commonwealth.json,0
+2,2421.0,12283.2,-8471.0,3812.2,6141.6,4235.5,1210.5,1,1912.0,IDFC.json,0
+2,33.03,3390.0,-1455.5,1934.5,1695.0,727.75,16.515,1,720.0,Lloyds.json,1
+1,0.0,72665.23,0.0,72665.23,72665.23,0.0,0.0,0,0.0,US.json,1

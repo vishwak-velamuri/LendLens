@@ -1,0 +1,355 @@
+{
+    "transactions": [
+      {
+        "date": "2019-09-04",
+        "amount": -300.0,
+        "description": "LNK COOPERATIVE SW CD 4821 08DEC19",
+        "category": "withdrawal",
+        "original_row": [
+          "04 Sep19",
+          "LNK COOPERATIVE SW CD 4821 08DEC19",
+          "CPT",
+          "",
+          "300.00",
+          "873.56"
+        ]
+      },
+      {
+        "date": "2019-09-09",
+        "amount": 50.0,
+        "description": "P ADAMCZUK KASA 7420",
+        "category": "deposit",
+        "original_row": [
+          "09 Sep19",
+          "P ADAMCZUK KASA 7420",
+          "TFR",
+          "50.00",
+          "",
+          "923.56"
+        ]
+      },
+      {
+        "date": "2019-09-11",
+        "amount": -2.5,
+        "description": "BARCLAYCARD CD 7420",
+        "category": "withdrawal",
+        "original_row": [
+          "11 Sep19",
+          "BARCLAYCARD CD 7420",
+          "DEB",
+          "",
+          "2.50",
+          "921.06"
+        ]
+      },
+      {
+        "date": "2019-09-15",
+        "amount": -240.0,
+        "description": "WESTERN VILLA CD 7420",
+        "category": "withdrawal",
+        "original_row": [
+          "15 Sep19",
+          "WESTERN VILLA CD 7420",
+          "DEB",
+          "",
+          "240.00",
+          "681.06"
+        ]
+      },
+      {
+        "date": "2019-09-16",
+        "amount": -26.69,
+        "description": "WINELEAF CD 7420",
+        "category": "withdrawal",
+        "original_row": [
+          "16 Sep19",
+          "WINELEAF CD 7420",
+          "DEB",
+          "",
+          "26.69",
+          "654.37"
+        ]
+      },
+      {
+        "date": "2019-09-17",
+        "amount": -200.0,
+        "description": "LNK COOPERATIVE SW CD 7420 06DEC19",
+        "category": "withdrawal",
+        "original_row": [
+          "17 Sep19",
+          "LNK COOPERATIVE SW CD 7420 06DEC19",
+          "CPT",
+          "",
+          "200.00",
+          "454.37"
+        ]
+      },
+      {
+        "date": "2019-09-18",
+        "amount": -33.03,
+        "description": "LV LIFE 03592291015W",
+        "category": "other",
+        "original_row": [
+          "18 Sep19",
+          "LV LIFE 03592291015W",
+          "DD",
+          "",
+          "33.03",
+          "421.34"
+        ]
+      },
+      {
+        "date": "2019-09-22",
+        "amount": -30.46,
+        "description": "PARK FOOD AND WINE CD 7420",
+        "category": "withdrawal",
+        "original_row": [
+          "22 Sep19",
+          "PARK FOOD AND WINE CD 7420",
+          "DEB",
+          "",
+          "30.46",
+          "390.88"
+        ]
+      },
+      {
+        "date": "2019-09-22",
+        "amount": -20.0,
+        "description": "LNK COOPERATIVE SW CD 7420 05DEC19",
+        "category": "withdrawal",
+        "original_row": [
+          "22 Sep19",
+          "LNK COOPERATIVE SW CD 7420 05DEC19",
+          "CPT",
+          "",
+          "20.00",
+          "370.88"
+        ]
+      },
+      {
+        "date": "2019-09-25",
+        "amount": -200.0,
+        "description": "LNK COOPERATIVE SW CD 7420 03DEC19",
+        "category": "withdrawal",
+        "original_row": [
+          "25 Sep19",
+          "LNK COOPERATIVE SW CD 7420 03DEC19",
+          "CPT",
+          "",
+          "200.00",
+          "170.88"
+        ]
+      },
+      {
+        "date": "2019-09-26",
+        "amount": -17.43,
+        "description": "UBER  *TRIP LJSAM",
+        "category": "withdrawal",
+        "original_row": [
+          "26 Sep19",
+          "UBER  *TRIP LJSAM",
+          "DEB",
+          "",
+          "17.43",
+          "153.45"
+        ]
+      },
+      {
+        "date": "2019-09-29",
+        "amount": 960.0,
+        "description": "D ROBERTSON",
+        "category": "deposit",
+        "original_row": [
+          "29 Sep19",
+          "D ROBERTSON",
+          "DEB",
+          "960.00",
+          "",
+          "1113.45"
+        ]
+      },
+      {
+        "date": "2019-10-03",
+        "amount": -17.0,
+        "description": "WINELEAF CD 7420",
+        "category": "withdrawal",
+        "original_row": [
+          "03 Oct 19",
+          "WINELEAF CD 7420",
+          "DEB",
+          "",
+          "17.00",
+          "1096.45"
+        ]
+      },
+      {
+        "date": "2019-10-05",
+        "amount": 790.0,
+        "description": "KATE EYR G D LTD KEGD",
+        "category": "deposit",
+        "original_row": [
+          "05 Oct 19",
+          "KATE EYR G D LTD KEGD",
+          "FPI",
+          "790.00",
+          "",
+          "1886.45"
+        ]
+      },
+      {
+        "date": "2019-10-08",
+        "amount": -100.0,
+        "description": "LNK COOPERATIVE SW CD 7420 01DEC19",
+        "category": "withdrawal",
+        "original_row": [
+          "08 Oct19",
+          "LNK COOPERATIVE SW CD 7420 01DEC19",
+          "CPT",
+          "",
+          "100.00",
+          "1786.45"
+        ]
+      },
+      {
+        "date": "2019-10-12",
+        "amount": -10.0,
+        "description": "LNK PO MITCHAM LAN CD 7420 30NOV19",
+        "category": "withdrawal",
+        "original_row": [
+          "12 Oct19",
+          "LNK PO MITCHAM LAN CD 7420 30NOV19",
+          "CPT",
+          "",
+          "10.00",
+          "1776.45"
+        ]
+      },
+      {
+        "date": "2019-10-12",
+        "amount": -28.9,
+        "description": "MIS BAR MLECZNY CD 7420",
+        "category": "withdrawal",
+        "original_row": [
+          "12 Oct 19",
+          "MIS BAR MLECZNY CD 7420",
+          "DEB",
+          "",
+          "28.90",
+          "1747.55"
+        ]
+      },
+      {
+        "date": "2019-10-16",
+        "amount": -27.99,
+        "description": "SPORTSDIRECT 252 CD 7420",
+        "category": "withdrawal",
+        "original_row": [
+          "16 Oct 19",
+          "SPORTSDIRECT 252 CD 7420",
+          "DEB",
+          "",
+          "27.99",
+          "1719.56"
+        ]
+      },
+      {
+        "date": "2019-10-19",
+        "amount": 860.0,
+        "description": "KATE EYR G D LTD KEGD",
+        "category": "deposit",
+        "original_row": [
+          "19 Oct 19",
+          "KATE EYR G D LTD KEGD",
+          "FPI",
+          "860.00",
+          "",
+          "1849.56"
+        ]
+      },
+      {
+        "date": "2019-10-22",
+        "amount": 730.0,
+        "description": "LOYD STREATHAM HIG",
+        "category": "deposit",
+        "original_row": [
+          "22 Oct 19",
+          "LOYD STREATHAM HIG",
+          "CSH",
+          "730.00",
+          "",
+          "2579.56"
+        ]
+      },
+      {
+        "date": "2019-10-23",
+        "amount": -100.0,
+        "description": "A FARAFOSZYN",
+        "category": "withdrawal",
+        "original_row": [
+          "23 Oct19",
+          "A FARAFOSZYN",
+          "TFR",
+          "",
+          "100.00",
+          "2479.56"
+        ]
+      }
+    ],
+    "summary": {
+      "monthly_summaries": [
+        {
+          "month": "2019-09",
+          "total_deposits": 1010.0,
+          "total_withdrawals": -1070.61,
+          "net_cash_flow": -60.61,
+          "categories": {
+            "deposit": 1010.0,
+            "withdrawal": -1037.58,
+            "withdrawal_regular_bill": -33.03
+          }
+        },
+        {
+          "month": "2019-10",
+          "total_deposits": 2380.0,
+          "total_withdrawals": -384.89,
+          "net_cash_flow": 1995.11,
+          "categories": {
+            "deposit": 2380.0,
+            "withdrawal": -384.89,
+            "withdrawal_regular_bill": 0.0
+          }
+        }
+      ],
+      "overall_summary": {
+        "total_deposits": 3390.0,
+        "total_withdrawals": -1455.5,
+        "net_cash_flow": 1934.5,
+        "average_monthly_deposits": 1695.0,
+        "average_monthly_withdrawals": -727.75,
+        "categories": {
+          "deposit": 3390.0,
+          "withdrawal": -1422.47,
+          "withdrawal_regular_bill": -33.03
+        }
+      },
+      "recurring_payments": [
+        {
+          "description": "LNK COOPERATIVE SW CD 7420",
+          "frequency": "monthly",
+          "amount": -200.0
+        },
+        {
+          "description": "WINELEAF CD 7420",
+          "frequency": "monthly",
+          "amount": -21.845
+        }
+      ],
+      "potential_loans": [
+        {
+          "description": "LNK COOPERATIVE SW CD 7420",
+          "monthly_payment": -200.0,
+          "total_paid": -720.0
+        }
+      ]
+    }
+  }

@@ -1,0 +1,28 @@
+{
+  "bank_name": "IDFC First Bank",
+  "account_number_label": "ACCOUNT NO",
+  "name_label": "CUSTOMER ID",
+  "account_type_label": "ACCOUNT TYPE",
+  "statement_period": {
+    "label": "STATEMENT PERIOD",
+    "format": "DD-MMM-YYYY to DD-MMM-YYYY"
+  },
+  "opening_balance_label": "Opening Balance",
+  "total_debit_label": "Total Debit",
+  "total_credit_label": "Total Credit",
+  "closing_balance_label": "Closing Balance",
+  "date_format": "DD-MMM-YYYY",
+  "transaction_table_markers": {
+    "start": "Transaction Date Value Date Particulars Cheque No. Debit Credit Balance",
+    "end": ""
+  },
+  "columns": [
+    { "key": "transaction_date", "name": "Transaction Date" },
+    { "key": "value_date",       "name": "Value Date"       },
+    { "key": "description",      "name": "Particulars"      },
+    { "key": "cheque_no",        "name": "Cheque No."       },
+    { "key": "debit",            "name": "Debit"            },
+    { "key": "credit",           "name": "Credit"           },
+    { "key": "balance",          "name": "Balance"          }
+  ]
+}

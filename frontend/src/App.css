@@ -1,0 +1,415 @@
+/* Reset & box-sizing */
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+
+html, body { 
+  margin: 0; 
+  padding: 0; 
+  height: 100%; 
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #111;
+}
+
+/* Root container */
+.app-container { 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  min-height: 100%; 
+  padding: 2rem; 
+  background-color: #f7f7f7; /* light background */
+  color: #111;
+  line-height: 1.5;
+}
+
+/* Form wrapper */
+.upload-form { 
+  width: 100%; 
+  max-width: 500px; 
+  background: #fff; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 12px; 
+  padding: 2rem; 
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08); 
+  margin-bottom: 2.5rem; 
+  transition: all 0.2s ease;
+}
+
+.upload-form:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.75rem;
+}
+
+/* Form fields & buttons */
+.form-field { 
+  display: flex; 
+  flex-direction: column; 
+  margin-bottom: 1.5rem; 
+} 
+
+.form-field label { 
+  margin-bottom: 0.5rem; 
+  font-weight: 600; 
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #333;
+} 
+
+.form-field input[type="file"], 
+.form-field input[type="number"], 
+.form-field input[type="text"] { 
+  padding: 0.75rem 1rem; 
+  border: 2px solid #e0e0e0; 
+  border-radius: 8px; 
+  font-size: 1rem; 
+  transition: border-color 0.2s ease;
+  background-color: #fcfcfc;
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.form-field input:hover {
+  border-color: #aaa;
+}
+
+.file-upload-container {
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  padding: 2rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.file-upload-container:hover {
+  border-color: #000;
+  background-color: #f9f9f9;
+}
+
+.btn { 
+  display: inline-block; 
+  padding: 0.75rem 1.5rem; 
+  font-size: 1rem; 
+  font-weight: 600; 
+  text-align: center; 
+  cursor: pointer; 
+  border: none; 
+  border-radius: 8px; 
+  transition: all 0.2s ease;
+} 
+
+.btn-primary { 
+  background-color: #000; 
+  color: #fff; 
+} 
+
+.btn-primary:hover {
+  background-color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn-primary:disabled { 
+  background-color: #ccc; 
+  cursor: not-allowed; 
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #000;
+  color: #000;
+}
+
+.btn-outline:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Results dashboard */
+.results-dashboard { 
+  width: 100%; 
+  max-width: 800px; 
+  background: #fff; 
+  border: 1px solid #e0e0e0; 
+  border-radius: 12px; 
+  padding: 2rem; 
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08); 
+}
+
+.dashboard-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #000;
+  border-bottom: 2px solid #000;
+  padding-bottom: 0.75rem;
+}
+
+/* Tables & metrics grid */
+.metrics-grid { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 1.5rem; 
+  margin-bottom: 2rem; 
+} 
+
+.metric-card { 
+  background: #f1f1f1; 
+  border-radius: 10px; 
+  padding: 1.25rem 1rem; 
+  text-align: center; 
+  transition: transform 0.2s ease;
+  border-bottom: 3px solid #000;
+} 
+
+.metric-card:hover {
+  transform: translateY(-5px);
+}
+
+.metric-card h4 { 
+  margin: 0 0 0.5rem; 
+  font-size: 0.9rem; 
+  color: #555; 
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+} 
+
+.metric-card p { 
+  margin: 0; 
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  color: #000;
+} 
+
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+  margin-bottom: 2rem; 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+} 
+
+th, td { 
+  padding: 1rem; 
+  text-align: left; 
+} 
+
+th { 
+  background: #111; 
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+tr:hover {
+  background-color: #eee;
+}
+
+/* Decision banner */
+.decision-banner { 
+  padding: 1.5rem; 
+  border-radius: 8px; 
+  text-align: center; 
+  font-size: 1.5rem; 
+  font-weight: 700; 
+  margin-bottom: 1.5rem; 
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+} 
+
+.decision-APPROVE { 
+  background-color: #111; 
+  color: #fff; 
+  border-left: 8px solid #55cc77;
+} 
+
+.decision-DENY { 
+  background-color: #111; 
+  color: #fff; 
+  border-left: 8px solid #ea4335;
+}
+
+/* Additional Modern Elements */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  margin-bottom: 1.5rem;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge-success {
+  background-color: #e2f4e8;
+  color: #1e7e34;
+}
+
+.badge-danger {
+  background-color: #f9e1e5;
+  color: #c41c33;
+}
+
+.badge-info {
+  background-color: #e6f3ff;
+  color: #0a5dc2;
+}
+
+/* Loading state */
+.loading-spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  to {transform: rotate(360deg);}
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+  }
+  
+  .upload-form,
+  .results-dashboard {
+    padding: 1.5rem;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+  }
+}
+
+.app-title { 
+  font-size: 2rem; 
+  font-weight: 700; 
+  margin-bottom: 2rem; 
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-align: center;
+  color: #000;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.app-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: #000;
+}
+
+/* Additional CSS classes for ResultsDashboard */
+.dashboard-subtitle {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.file-name {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Make sure badges can be used as inline styles too */
+strong.badge-success {
+  color: #1e7e34;
+  font-weight: 600;
+  background: none;
+  padding: 0;
+}
+
+strong.badge-danger {
+  color: #c41c33;
+  font-weight: 600;
+  background: none;
+  padding: 0;
+}
+
+/* Add these to your existing App.css file */
+
+/* File name styling with wrap support */
+.file-name {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #555;
+  word-break: break-all;
+  max-width: 100%;
+}
+
+/* Button group for form controls */
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Make the outline button properly styled */
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #000;
+  color: #000;
+  transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.btn-outline:disabled {
+  border-color: #ccc;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Fix the button widths for consistency */
+.button-group .btn {
+  flex: 1;
+}

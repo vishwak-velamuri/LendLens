@@ -1,0 +1,201 @@
+{
+    "transactions": [
+      {
+        "date": "2023-10-02",
+        "amount": 7265.0,
+        "description": "Electronic Deposit From 36  TREAS 310",
+        "category": "deposit",
+        "original_row": [
+          "Oct  2",
+          "Electronic Deposit From 36  TREAS 310",
+          "REF=172750102657000N00",
+          "7,265.00"
+        ]
+      },
+      {
+        "date": "2023-10-03",
+        "amount": 6400.0,
+        "description": "Electronic Deposit From 36  TREAS 310",
+        "category": "deposit",
+        "original_row": [
+          "Oct  3",
+          "Electronic Deposit From 36  TREAS 310",
+          "REF=172760027363140N00",
+          "6,400.00"
+        ]
+      },
+      {
+        "date": "2023-10-04",
+        "amount": 11911.98,
+        "description": "Electronic Deposit From CGS ADMINISTATOR",
+        "category": "deposit",
+        "original_row": [
+          "Oct  4",
+          "Electronic Deposit From CGS ADMINISTATOR",
+          "REF=172720058223180Y00",
+          "11,911.98"
+        ]
+      },
+      {
+        "date": "2023-10-11",
+        "amount": 4972.84,
+        "description": "Electronic Deposit From CGS ADMINISTATOR",
+        "category": "deposit",
+        "original_row": [
+          "Oct  11",
+          "Electronic Deposit From CGS ADMINISTATOR",
+          "REF=172780042278970Y00",
+          "4,972.84"
+        ]
+      },
+      {
+        "date": "2023-10-12",
+        "amount": 4510.0,
+        "description": "Electronic Deposit From 36  TREAS 310",
+        "category": "deposit",
+        "original_row": [
+          "Oct  12",
+          "Electronic Deposit From 36  TREAS 310",
+          "REF=172850024413210N00",
+          "4,510.00"
+        ]
+      },
+      {
+        "date": "2023-10-12",
+        "amount": 5597.43,
+        "description": "Electronic Deposit From CGS ADMINISTATOR",
+        "category": "deposit",
+        "original_row": [
+          "Oct  12",
+          "Electronic Deposit From CGS ADMINISTATOR",
+          "REF=172790122999750Y00",
+          "5,597.43"
+        ]
+      },
+      {
+        "date": "2023-10-16",
+        "amount": 2641.08,
+        "description": "Electronic Deposit From 36  TREAS 310",
+        "category": "deposit",
+        "original_row": [
+          "Oct  16",
+          "Electronic Deposit From 36  TREAS 310",
+          "REF=172890066691320N00",
+          "2,641.08"
+        ]
+      },
+      {
+        "date": "2023-10-17",
+        "amount": 3036.78,
+        "description": "Electronic Deposit From CGS ADMINISTATOR",
+        "category": "deposit",
+        "original_row": [
+          "Oct  17",
+          "Electronic Deposit From CGS ADMINISTATOR",
+          "REF=172850047281610Y00",
+          "3,036.78"
+        ]
+      },
+      {
+        "date": "2023-10-20",
+        "amount": 760.0,
+        "description": "Electronic Deposit From 36  TREAS 310",
+        "category": "deposit",
+        "original_row": [
+          "Oct  20",
+          "Electronic Deposit From 36  TREAS 310",
+          "REF=172920112272070N00",
+          "760.00"
+        ]
+      },
+      {
+        "date": "2023-10-20",
+        "amount": 11414.48,
+        "description": "Electronic Deposit From CGS ADMINISTATOR",
+        "category": "deposit",
+        "original_row": [
+          "Oct  20",
+          "Electronic Deposit From CGS ADMINISTATOR",
+          "REF=172900111651190Y00",
+          "11,414.48"
+        ]
+      },
+      {
+        "date": "2023-10-23",
+        "amount": 3150.0,
+        "description": "Electronic Deposit From 36  TREAS 310",
+        "category": "deposit",
+        "original_row": [
+          "Oct  23",
+          "Electronic Deposit From 36  TREAS 310",
+          "REF=172960092179570N00",
+          "3,150.00"
+        ]
+      },
+      {
+        "date": "2023-10-24",
+        "amount": 305.71,
+        "description": "Electronic Deposit From CGS ADMINISTATOR",
+        "category": "deposit",
+        "original_row": [
+          "Oct  24",
+          "Electronic Deposit From CGS ADMINISTATOR",
+          "REF=172920071406510Y00",
+          "305.71"
+        ]
+      },
+      {
+        "date": "2023-10-24",
+        "amount": 660.0,
+        "description": "Electronic Deposit From 36  TREAS 310",
+        "category": "deposit",
+        "original_row": [
+          "Oct  24",
+          "Electronic Deposit From 36  TREAS 310",
+          "REF=172960187647050N00",
+          "660.00"
+        ]
+      },
+      {
+        "date": "2023-10-25",
+        "amount": 11572.01,
+        "description": "Electronic Deposit From CGS ADMINISTATOR",
+        "category": "deposit",
+        "original_row": [
+          "Oct  25",
+          "Electronic Deposit From CGS ADMINISTATOR",
+          "REF=172930041655740Y00",
+          "11,572.01"
+        ]
+      }
+    ],
+    "summary": {
+      "monthly_summaries": [
+        {
+          "month": "2023-10",
+          "total_deposits": 72665.23,
+          "total_withdrawals": 0.0,
+          "net_cash_flow": 72665.23,
+          "categories": {
+            "deposit": 72665.23,
+            "withdrawal": 0.0,
+            "withdrawal_regular_bill": 0.0
+          }
+        }
+      ],
+      "overall_summary": {
+        "total_deposits": 72665.23,
+        "total_withdrawals": 0.0,
+        "net_cash_flow": 72665.23,
+        "average_monthly_deposits": 72665.23,
+        "average_monthly_withdrawals": 0.0,
+        "categories": {
+          "deposit": 72665.23,
+          "withdrawal": 0.0,
+          "withdrawal_regular_bill": 0.0
+        }
+      },
+      "recurring_payments": [],
+      "potential_loans": []
+    }
+  }

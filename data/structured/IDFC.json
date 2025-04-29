@@ -1,0 +1,386 @@
+{
+    "transactions": [
+      {
+        "date": "2018-04-01",
+        "amount": 1.0,
+        "description": "IMPS-MOB/Fund Trf/809119519742/Oma Ram/BENE - VER",
+        "category": "deposit",
+        "original_row": [
+          "01-Apr-2018",
+          "01-Apr-2018",
+          "IMPS-MOB/Fund Trf/809119519742/Oma Ram/BENE - VER",
+          "",
+          "",
+          "1.00",
+          "22.62"
+        ]
+      },
+      {
+        "date": "2018-04-01",
+        "amount": 2000.0,
+        "description": "IMPS-MOB/Fund Trf/809119553510/Oma Ram/2000",
+        "category": "deposit",
+        "original_row": [
+          "01-Apr-2018",
+          "01-Apr-2018",
+          "IMPS-MOB/Fund Trf/809119553510/Oma Ram/2000",
+          "",
+          "",
+          "2,000.00",
+          "2,022.62"
+        ]
+      },
+      {
+        "date": "2018-04-03",
+        "amount": -1912.0,
+        "description": "NACH/TP ACH Bajaj Finanac/88551679",
+        "category": "other",
+        "original_row": [
+          "03-Apr-2018",
+          "03-Apr-2018",
+          "NACH/TP ACH Bajaj Finanac/88551679",
+          "",
+          "1,912.00",
+          "",
+          "110.62"
+        ]
+      },
+      {
+        "date": "2018-04-04",
+        "amount": 170.2,
+        "description": "APB-INW/HP644950 000009 3003",
+        "category": "deposit",
+        "original_row": [
+          "04-Apr-2018",
+          "04-Apr-2018",
+          "APB-INW/HP644950 000009 3003",
+          "",
+          "",
+          "170.20",
+          "280.82"
+        ]
+      },
+      {
+        "date": "2018-04-04",
+        "amount": -75.0,
+        "description": "POS-VISA/KARUN MEDICAL/809414290216",
+        "category": "withdrawal",
+        "original_row": [
+          "04-Apr-2018",
+          "04-Apr-2018",
+          "POS-VISA/KARUN MEDICAL/809414290216",
+          "",
+          "75.00",
+          "",
+          "205.82"
+        ]
+      },
+      {
+        "date": "2018-04-05",
+        "amount": 3200.0,
+        "description": "IMPS-MOB/Fund Trf/809521437177/NITI N POOJARI/null",
+        "category": "deposit",
+        "original_row": [
+          "05-Apr-2018",
+          "05-Apr-2018",
+          "IMPS-MOB/Fund Trf/809521437177/NITI N POOJARI/null",
+          "",
+          "",
+          "3,200.00",
+          "3,405.82"
+        ]
+      },
+      {
+        "date": "2018-04-10",
+        "amount": -509.0,
+        "description": "BILLPAY/RECH/VODAFONE PRE/181000095 662/10042018",
+        "category": "other",
+        "original_row": [
+          "10-Apr-2018",
+          "10-Apr-2018",
+          "BILLPAY/RECH/VODAFONE PRE/181000095 662/10042018",
+          "",
+          "509.00",
+          "",
+          "2,896.82"
+        ]
+      },
+      {
+        "date": "2018-04-10",
+        "amount": -2000.0,
+        "description": "ATM-NFS/CASH WITHDRAWAL/+DONGRI OAT M/810020011497",
+        "category": "withdrawal",
+        "original_row": [
+          "10-Apr-2018",
+          "10-Apr-2018",
+          "ATM-NFS/CASH WITHDRAWAL/+DONGRI OAT M/810020011497",
+          "",
+          "2,000.00",
+          "",
+          "896.82"
+        ]
+      },
+      {
+        "date": "2018-04-14",
+        "amount": -500.0,
+        "description": "ATM-NFS/CASH WITHDRAWAL/+HIRANANDANI AKRUTI/810418",
+        "category": "withdrawal",
+        "original_row": [
+          "14-Apr-2018",
+          "14-Apr-2018",
+          "ATM-NFS/CASH WITHDRAWAL/+HIRANANDANI AKRUTI/810418",
+          "",
+          "500.00",
+          "",
+          "396.82"
+        ]
+      },
+      {
+        "date": "2018-04-20",
+        "amount": -300.0,
+        "description": "IMPS-RIB/Fund Trf/811010759849/Pay Rs300",
+        "category": "withdrawal",
+        "original_row": [
+          "20-Apr-2018",
+          "20-Apr-2018",
+          "IMPS-RIB/Fund Trf/811010759849/Pay Rs300",
+          "",
+          "300.00",
+          "",
+          "96.82"
+        ]
+      },
+      {
+        "date": "2018-04-20",
+        "amount": 300.0,
+        "description": "IMPS-RIB/FT-REV/811010759849/Pay Rs 300",
+        "category": "deposit",
+        "original_row": [
+          "20-Apr-2018",
+          "20-Apr-2018",
+          "IMPS-RIB/FT-REV/811010759849/Pay Rs 300",
+          "",
+          "",
+          "300.00",
+          "396.82"
+        ]
+      },
+      {
+        "date": "2018-04-20",
+        "amount": -75.0,
+        "description": "POS-VISA/MANSI MEDICAL/811013502615",
+        "category": "withdrawal",
+        "original_row": [
+          "20-Apr-2018",
+          "20-Apr-2018",
+          "POS-VISA/MANSI MEDICAL/811013502615",
+          "",
+          "75.00",
+          "",
+          "321.82"
+        ]
+      },
+      {
+        "date": "2018-04-22",
+        "amount": 1.0,
+        "description": "IMPS-MOB/Fund Trf/811212400262/Chandrakant Yuv/BE",
+        "category": "deposit",
+        "original_row": [
+          "22-Apr-2018",
+          "22-Apr-2018",
+          "IMPS-MOB/Fund Trf/811212400262/Chandrakant Yuv/BE",
+          "",
+          "",
+          "1.00",
+          "322.82"
+        ]
+      },
+      {
+        "date": "2018-04-22",
+        "amount": 4999.0,
+        "description": "IMPS-MOB/Fund Trf/811212428216/Chandrakant Yuv/ch",
+        "category": "deposit",
+        "original_row": [
+          "22-Apr-2018",
+          "22-Apr-2018",
+          "IMPS-MOB/Fund Trf/811212428216/Chandrakant Yuv/ch",
+          "",
+          "",
+          "4,999.00",
+          "5,321.82"
+        ]
+      },
+      {
+        "date": "2018-04-22",
+        "amount": -1000.0,
+        "description": "IMPS-RIB/Fund Trf/811212820665/Pay salary",
+        "category": "withdrawal",
+        "original_row": [
+          "22-Apr-2018",
+          "22-Apr-2018",
+          "IMPS-RIB/Fund Trf/811212820665/Pay salary",
+          "",
+          "1,000.00",
+          "",
+          "4,321.82"
+        ]
+      },
+      {
+        "date": "2018-04-22",
+        "amount": -500.0,
+        "description": "IMPS-RIB/Fund Trf/811213820961/Pay for salary",
+        "category": "withdrawal",
+        "original_row": [
+          "22-Apr-2018",
+          "22-Apr-2018",
+          "IMPS-RIB/Fund Trf/811213820961/Pay for salary",
+          "",
+          "500.00",
+          "",
+          "3,821.82"
+        ]
+      },
+      {
+        "date": "2018-04-23",
+        "amount": -1000.0,
+        "description": "ATM-NFS/CASH WITHDRAWAL/+HIRANANDANI AKRUTI/811309",
+        "category": "withdrawal",
+        "original_row": [
+          "23-Apr-2018",
+          "23-Apr-2018",
+          "ATM-NFS/CASH WITHDRAWAL/+HIRANANDANI AKRUTI/811309",
+          "",
+          "1,000.00",
+          "",
+          "2,821.82"
+        ]
+      },
+      {
+        "date": "2018-04-23",
+        "amount": -2500.0,
+        "description": "IMPS-RIB/Fund Trf/811320861437/Pay salaryRs2500",
+        "category": "withdrawal",
+        "original_row": [
+          "23-Apr-2018",
+          "23-Apr-2018",
+          "IMPS-RIB/Fund Trf/811320861437/Pay salaryRs2500",
+          "",
+          "2,500.00",
+          "",
+          "321.82"
+        ]
+      },
+      {
+        "date": "2018-04-23",
+        "amount": -300.0,
+        "description": "IMPS-RIB/Fund Trf/811321862644/Pay 300",
+        "category": "withdrawal",
+        "original_row": [
+          "23-Apr-2018",
+          "23-Apr-2018",
+          "IMPS-RIB/Fund Trf/811321862644/Pay 300",
+          "",
+          "300.00",
+          "",
+          "21.82"
+        ]
+      },
+      {
+        "date": "2018-05-03",
+        "amount": 2000.0,
+        "description": "IMPS-INET/Fund Trf/812321002185/Chandrakant Yuv/I",
+        "category": "deposit",
+        "original_row": [
+          "03-May-2018",
+          "03-May-2018",
+          "IMPS-INET/Fund Trf/812321002185/Chandrakant Yuv/I",
+          "",
+          "",
+          "2,000.00",
+          "2,021.82"
+        ]
+      },
+      {
+        "date": "2018-05-05",
+        "amount": 1912.0,
+        "description": "NACH/TP ACH Bajaj Finanac/97127969",
+        "category": "deposit",
+        "original_row": [
+          "05-May-2018",
+          "05-May-2018",
+          "NACH/TP ACH Bajaj Finanac/97127969",
+          "",
+          "",
+          "1,912.00",
+          "109.82"
+        ]
+      },
+      {
+        "date": "2018-05-09",
+        "amount": -100.0,
+        "description": "ATM-NFS/CASH WITHDRAWAL/+WHITE HOUSE/812912009989",
+        "category": "withdrawal",
+        "original_row": [
+          "09-May-2018",
+          "09-May-2018",
+          "ATM-NFS/CASH WITHDRAWAL/+WHITE HOUSE/812912009989",
+          "",
+          "100.00",
+          "",
+          "9.82"
+        ]
+      }
+    ],
+    "summary": {
+      "monthly_summaries": [
+        {
+          "month": "2018-04",
+          "total_deposits": 8371.2,
+          "total_withdrawals": -8371.0,
+          "net_cash_flow": 0.2,
+          "categories": {
+            "deposit": 8371.2,
+            "withdrawal": -5950.0,
+            "withdrawal_regular_bill": -2421.0
+          }
+        },
+        {
+          "month": "2018-05",
+          "total_deposits": 3912.0,
+          "total_withdrawals": -100.0,
+          "net_cash_flow": 3812.0,
+          "categories": {
+            "deposit": 3912.0,
+            "withdrawal": -100.0,
+            "withdrawal_regular_bill": 0.0
+          }
+        }
+      ],
+      "overall_summary": {
+        "total_deposits": 12283.2,
+        "total_withdrawals": -8471.0,
+        "net_cash_flow": 3812.2,
+        "average_monthly_deposits": 6141.6,
+        "average_monthly_withdrawals": -4235.5,
+        "categories": {
+          "deposit": 12283.2,
+          "withdrawal": -6050.0,
+          "withdrawal_regular_bill": -2421.0
+        }
+      },
+      "recurring_payments": [
+        {
+          "description": "NACH/TP ACH Bajaj Finanac/88551679",
+          "frequency": "monthly",
+          "amount": -1912.0
+        }
+      ],
+      "potential_loans": [
+        {
+          "description": "NACH/TP ACH Bajaj Finanac/88551679",
+          "monthly_payment": -1912.0,
+          "total_paid": -1912.0
+        }
+      ]
+    }
+}

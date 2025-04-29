@@ -1,0 +1,27 @@
+{
+  "bank_name": "Commonwealth Bank",
+  "account_number_label": "Account Number",
+  "statement_period": {
+    "label": "Statement Period",
+    "format": "DD MMM YYYY - DD MMM YYYY"
+  },
+  "date_format": "DD MMM",
+  "transaction_dates_infer_year": true,
+  "transaction_table_markers": {
+    "start": "Date Transaction Debit Credit Balance",
+    "end": "Opening balance - Total debits"
+  },
+  "columns": [
+    { "key": "date",        "name": "Date"        },
+    { "key": "description", "name": "Transaction" },
+    { "key": "debit",       "name": "Debit"       },
+    { "key": "credit",      "name": "Credit"      },
+    { "key": "balance",     "name": "Balance"     }
+  ],
+  "summary": {
+    "opening_balance_label": "OPENING BALANCE",
+    "closing_balance_label": "CLOSING BALANCE",
+    "total_debits_label": "Total debits",
+    "total_credits_label": "Total credits"
+  }
+}

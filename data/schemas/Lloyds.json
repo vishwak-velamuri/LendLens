@@ -1,0 +1,28 @@
+{
+  "bank_name": "Lloyds Bank",
+  "name_label": "Account Holder",
+  "account_number_label": "Account number",
+  "statement_period": {
+    "label": "Classic statement",
+    "format": "DD MMM YYYY to DD MMM YYYY"
+  },
+  "summary": {
+    "money_in_label": "Money In",
+    "money_out_label": "Money Out",
+    "opening_balance_label": "Balance on",
+    "closing_balance_label": "Balance on"
+  },
+  "date_format": "DD MMM YY",
+  "transaction_table_markers": {
+    "start": "Date Description Type In (£) Out (£) Balance (£)",
+    "end": ""
+  },
+  "columns": [
+    { "key": "date",        "name": "Date"         },
+    { "key": "description", "name": "Description"  },
+    { "key": "type",        "name": "Type"         },
+    { "key": "in",          "name": "In (£)"       },
+    { "key": "out",         "name": "Out (£)"      },
+    { "key": "balance",     "name": "Balance (£)"  }
+  ]
+}

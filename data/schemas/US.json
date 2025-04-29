@@ -1,0 +1,60 @@
+{
+  "bank_name": "U.S. Bank",
+  "account_number_label": "Account Number",
+  "statement_period": {
+    "label": "Statement Period",
+    "format": "MMM D, YYYY to MMM D, YYYY"
+  },
+  "date_format": "MMM D",
+  "sections": [
+    {
+      "name": "Other Deposits",
+      "columns": [
+        { "key": "date",        "name": "Date"                          },
+        { "key": "description", "name": "Description of Transaction"    },
+        { "key": "ref_number",  "name": "Ref Number"                    },
+        { "key": "amount",      "name": "Amount"                        }
+      ]
+    },
+    {
+      "name": "Card Withdrawals",
+      "columns": [
+        { "key": "date",        "name": "Date"                          },
+        { "key": "description", "name": "Description of Transaction"    },
+        { "key": "amount",      "name": "Amount"                        }
+      ]
+    },
+    {
+      "name": "Other Withdrawals",
+      "columns": [
+        { "key": "date",        "name": "Date"                          },
+        { "key": "description", "name": "Description of Transaction"    },
+        { "key": "amount",      "name": "Amount"                        }
+      ]
+    },
+    {
+      "name": "Checks Presented Conventionally",
+      "columns": [
+        { "key": "check_no",    "name": "Check"                         },
+        { "key": "date",        "name": "Date"                          },
+        { "key": "ref_number",  "name": "Ref Number"                    },
+        { "key": "amount",      "name": "Amount"                        }
+      ]
+    },
+    {
+      "name": "Balance Summary",
+      "columns": [
+        { "key": "label",       "name": ""                              },
+        { "key": "amount",      "name": ""                              }
+      ]
+    }
+  ],
+  "balance_summary": {
+    "opening_balance_label":    "Beginning Balance",
+    "other_deposits_label":     "Other Deposits",
+    "card_withdrawals_label":   "Card Withdrawals",
+    "other_withdrawals_label":  "Other Withdrawals",
+    "checks_label":             "Checks Paid",
+    "closing_balance_label":    "Ending Balance"
+  }
+}

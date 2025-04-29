@@ -1,0 +1,323 @@
+{
+    "transactions": [
+      {
+        "date": "2022-12-01",
+        "amount": -4.0,
+        "description": "Account Fee",
+        "category": "withdrawal",
+        "original_row": [
+          "01 Dec Account Fee",
+          "4.00",
+          "",
+          "$804.80 CR"
+        ]
+      },
+      {
+        "date": "2022-12-01",
+        "amount": 40.0,
+        "description": "JL - Internet",
+        "category": "deposit",
+        "original_row": [
+          "JL - Internet",
+          "",
+          "40.00",
+          "$844.80 CR"
+        ]
+      },
+      {
+        "date": "2022-12-01",
+        "amount": 1000.0,
+        "description": "Transfer from xx8727 NetBank",
+        "category": "deposit",
+        "original_row": [
+          "01 Dec Transfer from xx8727 NetBank",
+          "",
+          "1,000.00",
+          "$1,844.80 CR"
+        ]
+      },
+      {
+        "date": "2022-12-01",
+        "amount": -70.0,
+        "description": "Transfer to xx6832 NetBank",
+        "category": "withdrawal",
+        "original_row": [
+          "01 Dec Transfer to xx6832 NetBank",
+          "70.00",
+          "",
+          "$1,774.80 CR"
+        ]
+      },
+      {
+        "date": "2022-12-01",
+        "amount": -122.25,
+        "description": "Direct Debit 000702 HBF - HEALTH",
+        "category": "other",
+        "original_row": [
+          "1439123504",
+          "122.25",
+          "",
+          "$1,652.55 CR"
+        ]
+      },
+      {
+        "date": "2022-12-01",
+        "amount": -700.0,
+        "description": "Oronsay",
+        "category": "withdrawal",
+        "original_row": [
+          "Oronsay",
+          "700.00",
+          "",
+          "$952.55 CR"
+        ]
+      },
+      {
+        "date": "2022-12-06",
+        "amount": -850.75,
+        "description": "TAX OFFICE PAYMENTS NetBank BPAY 75556",
+        "category": "withdrawal",
+        "original_row": [
+          "551004045508468221 ATO tax 2016 to 20",
+          "850.75",
+          "",
+          "$101.80 CR"
+        ]
+      },
+      {
+        "date": "2022-12-06",
+        "amount": 700.0,
+        "description": "Transfer from xx8727 NetBank",
+        "category": "deposit",
+        "original_row": [
+          "06 Dec Transfer from xx8727 NetBank",
+          "",
+          "700.00",
+          "$801.80 CR"
+        ]
+      },
+      {
+        "date": "2022-12-07",
+        "amount": -115.0,
+        "description": "TELSTRA CORP LTD NetBank BPAY 23796",
+        "category": "other",
+        "original_row": [
+          "2000353972134",
+          "115.00",
+          "",
+          "$686.80 CR"
+        ]
+      },
+      {
+        "date": "2022-12-07",
+        "amount": -27.9,
+        "description": "Direct Debit 165969 JETTS KINGSWAY",
+        "category": "other",
+        "original_row": [
+          "201727539277",
+          "27.90",
+          "",
+          "$658.90 CR"
+        ]
+      },
+      {
+        "date": "2022-12-21",
+        "amount": -56.42,
+        "description": "Direct Debit 180247 SGIO",
+        "category": "other",
+        "original_row": [
+          "MOT563142623171221",
+          "56.42",
+          "",
+          "$602.48 CR"
+        ]
+      },
+      {
+        "date": "2022-12-21",
+        "amount": -27.9,
+        "description": "Direct Debit 165969 JETTS KINGSWAY",
+        "category": "other",
+        "original_row": [
+          "201728541361",
+          "27.90",
+          "",
+          "$574.58 CR"
+        ]
+      },
+      {
+        "date": "2022-12-27",
+        "amount": 40.0,
+        "description": "Direct Credit 106600 CAMERON BROWNING",
+        "category": "deposit",
+        "original_row": [
+          "Ool party thanks x",
+          "",
+          "40.00",
+          "$594.58 CR"
+        ]
+      },
+      {
+        "date": "2023-01-01",
+        "amount": -4.0,
+        "description": "Account Fee",
+        "category": "withdrawal",
+        "original_row": [
+          "01 Jan  Account Fee",
+          "4.00",
+          "",
+          "$590.58 CR"
+        ]
+      },
+      {
+        "date": "2023-01-02",
+        "amount": 800.0,
+        "description": "Direct Credit 421520 JESSICA LAING",
+        "category": "deposit",
+        "original_row": [
+          "JL - Internet",
+          "",
+          "800.00",
+          "$1,308.33 CR"
+        ]
+      },
+      {
+        "date": "2023-01-02",
+        "amount": -122.25,
+        "description": "Direct Debit 000702 HBF - HEALTH",
+        "category": "other",
+        "original_row": [
+          "1439123504",
+          "122.25",
+          "",
+          "$1,238.33 CR"
+        ]
+      },
+      {
+        "date": "2023-01-04",
+        "amount": 1000.0,
+        "description": "Transfer from xx8727 NetBank app",
+        "category": "deposit",
+        "original_row": [
+          "04 Jan  Transfer from xx8727 NetBank app",
+          "",
+          "1,000.00",
+          "$2,238.33 CR"
+        ]
+      },
+      {
+        "date": "2023-01-04",
+        "amount": -70.0,
+        "description": "Transfer to xx6832 NetBank app",
+        "category": "withdrawal",
+        "original_row": [
+          "04 Jan  Transfer to xx6832 NetBank app",
+          "70.00",
+          "",
+          "$2,168.33 CR"
+        ]
+      },
+      {
+        "date": "2023-01-04",
+        "amount": -27.9,
+        "description": "Direct Debit 165969 JETTS KINGSWAY",
+        "category": "other",
+        "original_row": [
+          "2018270979",
+          "27.90",
+          "",
+          "$2,140.43 CR"
+        ]
+      },
+      {
+        "date": "2023-01-05",
+        "amount": -1700.0,
+        "description": "Transfer to other Bank NetBank",
+        "category": "withdrawal",
+        "original_row": [
+          "Oronsay",
+          "1,700.00",
+          "",
+          "$510.43 CR"
+        ]
+      },
+      {
+        "date": "2023-01-07",
+        "amount": -115.0,
+        "description": "TELSTRA CORP LTD NetBank BPAY 23796",
+        "category": "other",
+        "original_row": [
+          "2000353972134",
+          "115.00",
+          "",
+          "$395.43 CR"
+        ]
+      }
+    ],
+    "summary": {
+      "monthly_summaries": [
+        {
+          "month": "2022-12",
+          "total_deposits": 1780.0,
+          "total_withdrawals": -1896.22,
+          "net_cash_flow": -116.22,
+          "categories": {
+            "deposit": 1780.0,
+            "withdrawal": -1574.75,
+            "withdrawal_regular_bill": -321.47
+          }
+        },
+        {
+          "month": "2023-01",
+          "total_deposits": 1800.0,
+          "total_withdrawals": -2039.15,
+          "net_cash_flow": -239.15,
+          "categories": {
+            "deposit": 1800.0,
+            "withdrawal": -1774.0,
+            "withdrawal_regular_bill": -265.15
+          }
+        }
+      ],
+      "overall_summary": {
+        "total_deposits": 3580.0,
+        "total_withdrawals": -3935.37,
+        "net_cash_flow": -355.37,
+        "average_monthly_deposits": 1790.0,
+        "average_monthly_withdrawals": -1967.685,
+        "categories": {
+          "deposit": 3580.0,
+          "withdrawal": -3348.75,
+          "withdrawal_regular_bill": -586.62
+        }
+      },
+      "recurring_payments": [
+        {
+          "description": "Direct Debit 000702 HBF - HEALTH",
+          "frequency": "monthly",
+          "amount": -122.25
+        },
+        {
+          "description": "Direct Debit 165969 JETTS KINGSWAY",
+          "frequency": "monthly",
+          "amount": -27.9
+        },
+        {
+          "description": "TELSTRA CORP LTD NetBank BPAY 23796",
+          "frequency": "monthly",
+          "amount": -115.0
+        }
+      ],
+      "potential_loans": [
+        {
+          "description": "Oronsay",
+          "monthly_payment": -700.0,
+          "total_paid": -700.0
+        },
+        {
+          "description": "Transfer to other Bank NetBank",
+          "monthly_payment": -1700.0,
+          "total_paid": -1700.0
+        }
+      ]
+    }
+  }
